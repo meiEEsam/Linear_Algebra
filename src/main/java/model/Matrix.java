@@ -1,13 +1,31 @@
 package model;
 
+import java.util.ArrayList;
+
 public class Matrix {
     private Number[][] elements;
     private Number determinant;
-
+    private ArrayList<Number> eigenvalue;
     public Matrix(Number[][] elements){
         this.elements = elements;
         if (elements.length==elements[0].length)
             this.determinant = determinantCalculator(elements);
+        if((this.elements.length)==(this.elements[0].length))
+        {
+            eigenvalue=new ArrayList<>();
+            findEigenValues();
+        }
+
+
+    }
+
+    private void findEigenValues() {
+
+
+
+
+
+
     }
 
     public static Matrix multiply(Matrix A, Matrix B){
