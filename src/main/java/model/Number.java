@@ -9,6 +9,10 @@ public class Number {
         this.imaginaryPart = imaginaryPart;
     }
 
+    public static Number conjugate(Number number){
+        return new Number(number.getRealPart(), -number.getImaginaryPart());
+    }
+
     public void setRealPart(double realPart) {
         this.realPart = realPart;
     }
