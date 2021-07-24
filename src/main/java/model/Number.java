@@ -5,6 +5,13 @@ public class Number {
     private double imaginaryPart;
 
     public Number(double realPart, double imaginaryPart) {
+        if(realPart==-0.0)
+             realPart=0;
+        if(imaginaryPart==-0.0)
+             imaginaryPart=0;
+
+
+
         this.realPart = realPart;
         this.imaginaryPart = imaginaryPart;
     }
