@@ -140,14 +140,7 @@ public class NumberGenerator {
             return new Number(Double.parseDouble(a),Double.parseDouble(c));
         }
 
-
-
-
-
-
-
-
-
+        System.err.println("Wrong input");
         return null;
     }
 
