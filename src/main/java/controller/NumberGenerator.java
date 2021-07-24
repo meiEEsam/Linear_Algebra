@@ -18,7 +18,7 @@ public class NumberGenerator {
 
     public NumberGenerator() {
        realNumberInput=Pattern.compile("^\\s*(\\d+)\\s*(\\.\\s*\\d+)?\\s*$");
-       realNumberInput=Pattern.compile("^\\s*(\\d+)\\s*(\\.\\s*\\d+)?\\s*[i|I|j|J]\\s*$");
+       imaginaryNumberInput=Pattern.compile("^\\s*(\\d+)\\s*(\\.\\s*\\d+)?\\s*[i|I|j|J]\\s*$");
        complexNumberInput1=Pattern.compile("^\\s*(\\d+)\\s*(\\.\\s*\\d+)?\\s*[i|I|j|J]\\s*\\+\\s*(\\d+)\\s*(\\.\\s*\\d+)?\\s*$");
        complexNumberInput2=Pattern.compile("^\\s*(\\d+)\\s*(\\.\\s*\\d+)?\\s*\\+\\s*(\\d+)\\s*(\\.\\s*\\d+)?\\s*[i|I|j|J]\\s*$");
 
@@ -37,21 +37,25 @@ public class NumberGenerator {
         
         if(realNumberInputMatcher.find())
         {
-            
+
+
             String a="",b=".0";
             a=realNumberInputMatcher.group(1);
+
             try {
                 b=realNumberInputMatcher.group(2); 
                 a=a+b;
+                b=".0";
+
             }
             catch (Exception e)
-            { 
+            {
+                System.out.println("hey");
                 a=a+b;   
                 
             }
-            
-            
-            
+
+
            return new Number(Double.parseDouble(a),0);
            }
 

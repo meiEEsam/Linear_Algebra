@@ -28,4 +28,12 @@ public class Number {
     public double getImaginaryPart() {
         return imaginaryPart;
     }
+
+    @Override
+    public String toString() {
+        return
+                " realPart= " + realPart +
+                ", imaginaryPart= " + imaginaryPart
+                ;
+    }
 }
